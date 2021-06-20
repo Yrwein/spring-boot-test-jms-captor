@@ -1,4 +1,4 @@
-package cz.josefczech.springboottestjms.jmscaptor.testinstanceconfig;
+package cz.josefczech.springboot.test.jmscaptor.config;
 
 import org.springframework.jms.annotation.JmsListenerConfigurer;
 import org.springframework.jms.config.JmsListenerContainerFactory;

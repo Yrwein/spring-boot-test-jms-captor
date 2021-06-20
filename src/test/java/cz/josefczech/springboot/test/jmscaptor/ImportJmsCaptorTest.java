@@ -1,8 +1,8 @@
-package cz.josefczech.springboottestjms.jmscaptor;
+package cz.josefczech.springboot.test.jmscaptor;
 
-import cz.josefczech.springboottestjms.config.MultipleListenerContainerJmsConfiguration;
-import cz.josefczech.springboottestjms.config.SingleListenerContainerJmsConfiguration;
-import cz.josefczech.springboottestjms.dto.TestMessage;
+import cz.josefczech.springboot.test.jmscaptor.config.MultipleListenerContainerJmsConfiguration;
+import cz.josefczech.springboot.test.jmscaptor.config.SingleListenerContainerJmsConfiguration;
+import cz.josefczech.springboot.test.jmscaptor.dto.TestMessage;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

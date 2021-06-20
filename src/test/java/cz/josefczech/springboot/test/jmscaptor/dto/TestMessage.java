@@ -1,4 +1,4 @@
-package cz.josefczech.springboottestjms.dto;
+package cz.josefczech.springboot.test.jmscaptor.dto;
 
 import java.io.Serializable;
 

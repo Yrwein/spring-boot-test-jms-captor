@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>cz.josefczech</groupId>
-    <artifactId>spring-boot-test-jms</artifactId>
+    <artifactId>springboot-test-jms-captor</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>spring-boot-test-jms</name>
     <description>SpringBoot utils for writing JMS integration tests</description>

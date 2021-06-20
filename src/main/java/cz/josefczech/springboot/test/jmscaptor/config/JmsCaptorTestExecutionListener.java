@@ -1,6 +1,6 @@
-package cz.josefczech.springboottestjms.jmscaptor.testinstanceconfig;
+package cz.josefczech.springboot.test.jmscaptor.config;
 
-import cz.josefczech.springboottestjms.jmscaptor.JmsCaptor;
+import cz.josefczech.springboot.test.jmscaptor.JmsCaptor;
 import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.TestContext;
 import org.springframework.test.context.support.AbstractTestExecutionListener;

@@ -1,4 +1,4 @@
-package cz.josefczech.springboottestjms;
+package cz.josefczech.springboot.test.jmscaptor;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,4 +1,4 @@
-package cz.josefczech.springboottestjms.jmscaptor;
+package cz.josefczech.springboot.test.jmscaptor;
 
 import org.springframework.jms.annotation.JmsListener;
 

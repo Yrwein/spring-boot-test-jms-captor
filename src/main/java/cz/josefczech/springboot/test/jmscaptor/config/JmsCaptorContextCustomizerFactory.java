@@ -1,7 +1,7 @@
-package cz.josefczech.springboottestjms.jmscaptor.testinstanceconfig;
+package cz.josefczech.springboot.test.jmscaptor.config;
 
-import cz.josefczech.springboottestjms.jmscaptor.ImportJmsCaptor;
-import cz.josefczech.springboottestjms.jmscaptor.exception.IllegalImportJmsCaptorCount;
+import cz.josefczech.springboot.test.jmscaptor.ImportJmsCaptor;
+import cz.josefczech.springboot.test.jmscaptor.exception.OnlyOneImportJmsCaptorAllowedException;
 import org.springframework.core.annotation.MergedAnnotation;
 import org.springframework.core.annotation.MergedAnnotations;
 import org.springframework.lang.NonNull;
@@ -34,9 +34,9 @@ class JmsCaptorContextCustomizerFactory implements ContextCustomizerFactory {
             List<ImportJmsCaptorData> annotations = findImportJmsCaptorAnnotationData(field);
 
             if (annotations.size() >= 2) {
-                throw new IllegalImportJmsCaptorCount(
+                throw new OnlyOneImportJmsCaptorAllowedException(
                         "Field " + testClass.getSimpleName() + "#" + field.getName()
-                                + " has too many ImportJmsCaptor annotations; only one allowed: " + annotations.size());
+                                + " has too many ImportJmsCaptor annotations; only one is allowed: " + annotations.size());
             }
 
             if (annotations.size() == 1) {

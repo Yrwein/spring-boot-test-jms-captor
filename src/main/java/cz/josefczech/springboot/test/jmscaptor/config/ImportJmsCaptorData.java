@@ -1,6 +1,6 @@
-package cz.josefczech.springboottestjms.jmscaptor.testinstanceconfig;
+package cz.josefczech.springboot.test.jmscaptor.config;
 
-import cz.josefczech.springboottestjms.jmscaptor.ImportJmsCaptor;
+import cz.josefczech.springboot.test.jmscaptor.ImportJmsCaptor;
 
 /**
  * DTO for {@link ImportJmsCaptor} fields so we don't have to deal with some proxies later.

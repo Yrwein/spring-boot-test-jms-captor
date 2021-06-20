@@ -1,4 +1,4 @@
-package cz.josefczech.springboottestjms.config;
+package cz.josefczech.springboot.test.jmscaptor.config;
 
 import org.springframework.boot.autoconfigure.jms.DefaultJmsListenerContainerFactoryConfigurer;
 import org.springframework.boot.test.context.TestConfiguration;
