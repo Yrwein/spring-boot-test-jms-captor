@@ -1,9 +1,15 @@
-package cz.josefczech.springboottestjms.jmscaptor;
+package cz.josefczech.springboottestjms.jmscaptor.testinstanceconfig;
+
+import cz.josefczech.springboottestjms.jmscaptor.JmsCaptor;
 
 import java.lang.reflect.Field;
 import java.util.Map;
 
-public class JmsCaptorRegistry {
+/**
+ * JmsCaptorRegistry is Spring bean holding fields and their JmsCaptors.
+ * The bean is created by {@link JmsCaptorContextCustomizer} for {@link JmsCaptorTestExecutionListener}.
+ */
+class JmsCaptorRegistry {
 
     private final Map<Field, JmsCaptor<?>> fieldToJmsCaptorMap;
 

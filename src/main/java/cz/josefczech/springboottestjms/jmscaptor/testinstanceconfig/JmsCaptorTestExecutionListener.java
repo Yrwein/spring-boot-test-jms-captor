@@ -1,5 +1,6 @@
-package cz.josefczech.springboottestjms.jmscaptor;
+package cz.josefczech.springboottestjms.jmscaptor.testinstanceconfig;
 
+import cz.josefczech.springboottestjms.jmscaptor.JmsCaptor;
 import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.TestContext;
 import org.springframework.test.context.support.AbstractTestExecutionListener;
@@ -8,8 +9,16 @@ import org.springframework.util.ReflectionUtils;
 import java.lang.reflect.Field;
 import java.util.Map;
 
-public class JmsCaptorTestExecutionListener extends AbstractTestExecutionListener {
+/**
+ * JmsCaptorTestExecutionListener is responsible for setting JmsCaptor fields on test instances
+ * and cleaning up the captor before every run.
+ */
+class JmsCaptorTestExecutionListener extends AbstractTestExecutionListener {
 
+    /**
+     * The method prepares test instance by setting JmsCaptor to all fields.
+     * @param testContext Spring test context
+     */
     @Override
     public void prepareTestInstance(TestContext testContext) {
         ApplicationContext applicationContext = testContext.getApplicationContext();
@@ -27,6 +36,10 @@ public class JmsCaptorTestExecutionListener extends AbstractTestExecutionListene
         }
     }
 
+    /**
+     * JmsCaptors in test instance fields are cleared of messages before every test run.
+     * @param testContext Spring test context
+     */
     @Override
     public void beforeTestMethod(TestContext testContext) {
         ApplicationContext applicationContext = testContext.getApplicationContext();

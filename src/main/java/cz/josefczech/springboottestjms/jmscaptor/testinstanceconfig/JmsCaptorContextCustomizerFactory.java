@@ -1,5 +1,6 @@
-package cz.josefczech.springboottestjms.jmscaptor;
+package cz.josefczech.springboottestjms.jmscaptor.testinstanceconfig;
 
+import cz.josefczech.springboottestjms.jmscaptor.ImportJmsCaptor;
 import cz.josefczech.springboottestjms.jmscaptor.exception.IllegalImportJmsCaptorCount;
 import org.springframework.core.annotation.MergedAnnotation;
 import org.springframework.core.annotation.MergedAnnotations;
@@ -7,7 +8,6 @@ import org.springframework.lang.NonNull;
 import org.springframework.test.context.ContextConfigurationAttributes;
 import org.springframework.test.context.ContextCustomizer;
 import org.springframework.test.context.ContextCustomizerFactory;
-import org.springframework.util.ReflectionUtils;
 
 import java.lang.reflect.Field;
 import java.util.HashMap;
@@ -15,7 +15,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-public class JmsCaptorContextCustomizerFactory implements ContextCustomizerFactory {
+/**
+ * The customizer factory creates instances of {@link JmsCaptorContextCustomizer}
+ * if any field on given test class contains {@link ImportJmsCaptor} annotation.
+ */
+class JmsCaptorContextCustomizerFactory implements ContextCustomizerFactory {
 
     @Override
     public ContextCustomizer createContextCustomizer(

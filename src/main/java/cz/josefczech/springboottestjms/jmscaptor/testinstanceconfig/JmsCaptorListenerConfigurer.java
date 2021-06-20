@@ -1,4 +1,4 @@
-package cz.josefczech.springboottestjms.jmscaptor;
+package cz.josefczech.springboottestjms.jmscaptor.testinstanceconfig;
 
 import org.springframework.jms.annotation.JmsListenerConfigurer;
 import org.springframework.jms.config.JmsListenerContainerFactory;
@@ -6,7 +6,10 @@ import org.springframework.jms.config.JmsListenerEndpointRegistrar;
 import org.springframework.jms.config.SimpleJmsListenerEndpoint;
 import org.springframework.jms.listener.MessageListenerContainer;
 
-public class JmsCaptorListenerConfigurer implements JmsListenerConfigurer {
+/**
+ * Spring configuration bean for registering JMS listener to Spring context.
+ */
+class JmsCaptorListenerConfigurer implements JmsListenerConfigurer {
 
     private final SimpleJmsListenerEndpoint endpoint;
 

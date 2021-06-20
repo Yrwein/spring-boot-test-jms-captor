@@ -1,5 +1,6 @@
-package cz.josefczech.springboottestjms.jmscaptor;
+package cz.josefczech.springboottestjms.jmscaptor.testinstanceconfig;
 
+import cz.josefczech.springboottestjms.jmscaptor.JmsCaptor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.support.BeanDefinitionBuilder;
@@ -19,7 +20,16 @@ import java.lang.reflect.ParameterizedType;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-public class JmsCaptorContextCustomizer implements ContextCustomizer {
+/**
+ * Context customizer is responsible for registering all bean definitions:
+ *
+ * <ul>
+ *     <li>{@link JmsCaptorListenerConfigurer} so JmsCaptors can listen on queues.</li>
+ *     <li>{@link JmsCaptorRegistry} for {@link JmsCaptorTestExecutionListener}
+ *     (so JmsCaptors can set to test instance fields).</li>
+ * </ul>
+ */
+class JmsCaptorContextCustomizer implements ContextCustomizer {
 
     private static final Logger logger = LoggerFactory.getLogger(JmsCaptorContextCustomizer.class);
 

@@ -1,5 +1,5 @@
 org.springframework.test.context.ContextCustomizerFactory=\
-cz.josefczech.springboottestjms.jmscaptor.JmsCaptorContextCustomizerFactory
+cz.josefczech.springboottestjms.jmscaptor.testinstanceconfig.JmsCaptorContextCustomizerFactory
 
 org.springframework.test.context.TestExecutionListener=\
-cz.josefczech.springboottestjms.jmscaptor.JmsCaptorTestExecutionListener
+cz.josefczech.springboottestjms.jmscaptor.testinstanceconfig.JmsCaptorTestExecutionListener
